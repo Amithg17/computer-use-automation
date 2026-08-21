@@ -1,0 +1,112 @@
+{
+  "artifact_version": "1.0",
+  "capability": {
+    "name": "member_lookup",
+    "description": "Look up a bank member and return their savings balance.",
+    "surface": "web"
+  },
+  "inputs": {
+    "member_id": {
+      "type": "string",
+      "required": true,
+      "description": "Unique bank member identifier."
+    }
+  },
+  "actions": [
+    {
+      "id": "step_1",
+      "action": "navigate",
+      "target": {
+        "type": "url",
+        "value": "http://127.0.0.1:8000"
+      },
+      "description": "Open the Bank Operations Portal."
+    },
+    {
+      "id": "step_2",
+      "action": "click",
+      "target": {
+        "type": "role",
+        "role": "button",
+        "name": "Member Search"
+      },
+      "description": "Open the member search workflow."
+    },
+    {
+      "id": "step_3",
+      "action": "fill",
+      "target": {
+        "type": "label",
+        "value": "Member ID"
+      },
+      "input": "{{member_id}}",
+      "description": "Enter the requested member ID."
+    },
+    {
+      "id": "step_4",
+      "action": "click",
+      "target": {
+        "type": "role",
+        "role": "button",
+        "name": "Search Member"
+      },
+      "description": "Submit the member search."
+    },
+    {
+      "id": "step_5",
+      "action": "verify",
+      "target": {
+        "type": "text",
+        "value": "Member Details"
+      },
+      "description": "Verify that the member details view is displayed."
+    },
+    {
+      "id": "step_6",
+      "action": "verify",
+      "target": {
+        "type": "text",
+        "value": "Chukshith N"
+      },
+      "description": "Verify the discovered member identity."
+    },
+    {
+      "id": "step_7",
+      "action": "extract",
+      "target": {
+        "type": "css",
+        "value": ".profile-field-value"
+      },
+      "output": "savings_balance",
+      "description": "Extract the displayed savings balance."
+    }
+  ],
+  "outputs": {
+    "member_name": {
+      "type": "string"
+    },
+    "savings_balance": {
+      "type": "string"
+    }
+  },
+  "success_condition": {
+    "type": "all",
+    "conditions": [
+      "Member Details is visible",
+      "Member identity is verified",
+      "Savings balance is extracted"
+    ]
+  },
+  "known_outcomes": [
+    {
+      "outcome": "MEMBER_NOT_FOUND",
+      "category": "business_outcome",
+      "trigger": "Member not found."
+    },
+    {
+      "outcome": "SERVICE_FAILURE",
+      "category": "application_failure",
+      "trigger": "Member service unavailable."
+    }
+  ]
+}

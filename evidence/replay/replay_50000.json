@@ -1,0 +1,35 @@
+{
+  "capability": "member_lookup",
+  "artifact_version": "1.0",
+  "member_id": "50000",
+  "status": "failure",
+  "steps": [
+    {
+      "step_id": "step_1",
+      "action": "navigate",
+      "status": "success"
+    },
+    {
+      "step_id": "step_2",
+      "action": "click",
+      "target": "Member Search",
+      "status": "success"
+    },
+    {
+      "step_id": "step_3",
+      "action": "fill",
+      "target": "Member ID",
+      "status": "success"
+    },
+    {
+      "step_id": "step_4",
+      "action": "click",
+      "target": "Search Member",
+      "status": "success"
+    }
+  ],
+  "outputs": {},
+  "category": "application_failure",
+  "outcome": "SERVICE_FAILURE",
+  "message": "Member service unavailable."
+}

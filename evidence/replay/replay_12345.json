@@ -1,0 +1,55 @@
+{
+  "capability": "member_lookup",
+  "artifact_version": "1.0",
+  "member_id": "12345",
+  "status": "success",
+  "steps": [
+    {
+      "step_id": "step_1",
+      "action": "navigate",
+      "status": "success"
+    },
+    {
+      "step_id": "step_2",
+      "action": "click",
+      "target": "Member Search",
+      "status": "success"
+    },
+    {
+      "step_id": "step_3",
+      "action": "fill",
+      "target": "Member ID",
+      "status": "success"
+    },
+    {
+      "step_id": "step_4",
+      "action": "click",
+      "target": "Search Member",
+      "status": "success"
+    },
+    {
+      "step_id": "step_5",
+      "action": "verify",
+      "target": "Member Details",
+      "status": "success"
+    },
+    {
+      "step_id": "step_6",
+      "action": "verify",
+      "target": "Chukshith N",
+      "status": "success"
+    },
+    {
+      "step_id": "step_7",
+      "action": "extract",
+      "target": ".profile-field-value",
+      "output": "savings_balance",
+      "value": "12345",
+      "status": "success"
+    }
+  ],
+  "outputs": {
+    "savings_balance": "12345",
+    "member_name": "Chukshith N"
+  }
+}

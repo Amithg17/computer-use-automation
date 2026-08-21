@@ -1,0 +1,81 @@
+{
+  "run_type": "offline_human_handoff_test",
+  "status": "success",
+  "goal": "Demonstrate human takeover and resume on the same live browser session.",
+  "safety_policy": {
+    "version": "1.0",
+    "allowed_origin": "http://127.0.0.1:8000",
+    "allowed_actions": [
+      "click",
+      "extract",
+      "fill",
+      "finish",
+      "verify"
+    ],
+    "allowed_click_buttons": [
+      "Member Search",
+      "Search Member"
+    ],
+    "allowed_fill_labels": [
+      "Member ID"
+    ],
+    "risky_actions": [
+      "delete",
+      "download",
+      "login",
+      "logout",
+      "navigate",
+      "purchase",
+      "send",
+      "submit",
+      "transfer",
+      "upload"
+    ]
+  },
+  "handoff": {
+    "type": "human_intervention",
+    "status": "resumed",
+    "iteration": 1,
+    "handoff_number": 1,
+    "reason": "Offline controlled handoff test. No LLM request is made. Take control of this same browser session and complete the member lookup.",
+    "url": "http://127.0.0.1:8000/",
+    "decision": {
+      "action": "human_handoff_test",
+      "target": {
+        "type": "",
+        "role": "",
+        "name": "",
+        "value": ""
+      },
+      "value": "",
+      "output": "",
+      "reason": "Offline handoff demonstration."
+    },
+    "screenshot": "C:\\Users\\amith\\OneDrive\\Desktop\\computer-use-automation\\evidence\\agent\\human_handoff_1.png",
+    "resume_url": "http://127.0.0.1:8000/",
+    "resume_observation": {
+      "buttons": [
+        "Dashboard",
+        "Member Search",
+        "Account Services",
+        "Transaction Review",
+        "\u2190 Back to Search"
+      ],
+      "inputs": [],
+      "visible_text": "BO\nBank Operations\nInternal Operations Portal\nOperations User\nOU\nWORKSPACE\nDashboard Member Search\nOPERATIONS\nAccount Services Transaction Review\n\u2190 Back to Search\nMember Details\n\nAccount and profile information for the selected member.\n\nChukshith N\nMember ID: 12345\nActive\nMember ID\n12345\nMember Since\nMarch 2019\nPhone\n(555) 014-7821\nEmail\nchukshith.n@example.test\nSavings Balance\n$30,000.50\nAccounts\nAccount Number\tAccount Type\tStatus\tCurrent Balance\n****1234\tSavings\tActive\t$30,000.50\n****5678\tChecking\tActive\t$15,000.00"
+    }
+  },
+  "same_browser_session": true,
+  "resume_url": "http://127.0.0.1:8000/",
+  "resume_observation": {
+    "buttons": [
+      "Dashboard",
+      "Member Search",
+      "Account Services",
+      "Transaction Review",
+      "\u2190 Back to Search"
+    ],
+    "inputs": [],
+    "visible_text": "BO\nBank Operations\nInternal Operations Portal\nOperations User\nOU\nWORKSPACE\nDashboard Member Search\nOPERATIONS\nAccount Services Transaction Review\n\u2190 Back to Search\nMember Details\n\nAccount and profile information for the selected member.\n\nChukshith N\nMember ID: 12345\nActive\nMember ID\n12345\nMember Since\nMarch 2019\nPhone\n(555) 014-7821\nEmail\nchukshith.n@example.test\nSavings Balance\n$30,000.50\nAccounts\nAccount Number\tAccount Type\tStatus\tCurrent Balance\n****1234\tSavings\tActive\t$30,000.50\n****5678\tChecking\tActive\t$15,000.00"
+  }
+}

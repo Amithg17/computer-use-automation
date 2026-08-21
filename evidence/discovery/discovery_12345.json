@@ -1,0 +1,104 @@
+{
+  "goal": "Look up a member and return their savings balance.",
+  "target": "http://127.0.0.1:8000",
+  "input": {
+    "member_id": "12345"
+  },
+  "status": "success",
+  "observations": [
+    {
+      "step": 1,
+      "observation": "Bank Operations Portal is available."
+    },
+    {
+      "step": 2,
+      "observation": "Member Search button is available."
+    },
+    {
+      "step": 3,
+      "observation": "Member ID input field is available."
+    },
+    {
+      "step": 4,
+      "observation": "Search Member action was accepted."
+    },
+    {
+      "step": 5,
+      "observation": "Member Details page is visible."
+    },
+    {
+      "step": 6,
+      "observation": "Member identity verified as Chukshith N."
+    },
+    {
+      "step": 7,
+      "observation": "Savings balance observed: $30,000.50"
+    }
+  ],
+  "actions": [
+    {
+      "step": 1,
+      "action": "navigate",
+      "target": {
+        "type": "url",
+        "value": "http://127.0.0.1:8000"
+      }
+    },
+    {
+      "step": 2,
+      "action": "click",
+      "target": {
+        "type": "role",
+        "role": "button",
+        "name": "Member Search"
+      }
+    },
+    {
+      "step": 3,
+      "action": "fill",
+      "target": {
+        "type": "label",
+        "value": "Member ID"
+      },
+      "input": "{{member_id}}"
+    },
+    {
+      "step": 4,
+      "action": "click",
+      "target": {
+        "type": "role",
+        "role": "button",
+        "name": "Search Member"
+      }
+    },
+    {
+      "step": 5,
+      "action": "verify",
+      "target": {
+        "type": "text",
+        "value": "Member Details"
+      }
+    },
+    {
+      "step": 6,
+      "action": "verify",
+      "target": {
+        "type": "text",
+        "value": "Chukshith N"
+      }
+    },
+    {
+      "step": 7,
+      "action": "extract",
+      "target": {
+        "type": "css",
+        "value": ".profile-field-value"
+      },
+      "output": "savings_balance"
+    }
+  ],
+  "outputs": {
+    "member_name": "Chukshith N",
+    "savings_balance": "$30,000.50"
+  }
+}

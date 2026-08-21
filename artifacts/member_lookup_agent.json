@@ -1,0 +1,294 @@
+{
+  "artifact_version": "1.0",
+  "generated_by": "llm_discovery_agent",
+  "capability": {
+    "name": "member_lookup",
+    "description": "Look up a bank member and return their savings balance.",
+    "surface": "web"
+  },
+  "goal": "Look up member 12345 and return their current savings balance.",
+  "inputs": {
+    "member_id": {
+      "type": "string",
+      "required": true,
+      "description": "Unique bank member identifier."
+    }
+  },
+  "actions": [
+    {
+      "id": "step_1",
+      "action": "click",
+      "target": {
+        "type": "role",
+        "role": "button",
+        "name": "Search Member",
+        "value": ""
+      },
+      "description": "Open the member search workflow."
+    },
+    {
+      "id": "step_2",
+      "action": "fill",
+      "target": {
+        "type": "label",
+        "role": "",
+        "name": "",
+        "value": "Member ID"
+      },
+      "description": "Enter member ID 12345 into the search field.",
+      "input": "{{member_id}}"
+    },
+    {
+      "id": "step_3",
+      "action": "click",
+      "target": {
+        "type": "role",
+        "role": "button",
+        "name": "Search Member",
+        "value": ""
+      },
+      "description": "Search for member 12345 using the entered Member ID."
+    },
+    {
+      "id": "step_4",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "The member details are visible and the savings balance is shown on the page, so extract it now.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_5",
+      "action": "verify",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Chukshith N"
+      },
+      "description": "Verify the member details before extracting the savings balance."
+    },
+    {
+      "id": "step_6",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "Extract the verified current savings balance for member 12345.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_7",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "Extract the currently visible savings balance for member 12345.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_8",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "Extract the verified current savings balance for member 12345 from the visible member details.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_9",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "The member details are visible and the savings balance can be extracted from the page.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_10",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "The member details are visible and the savings balance is shown on the page; extract the balance to complete the lookup.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_11",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "The member details are visible and the savings balance is displayed; extract it now.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_12",
+      "action": "verify",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Chukshith N"
+      },
+      "description": "Verify the selected member identity before extracting the savings balance."
+    },
+    {
+      "id": "step_13",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "Extract the visible savings balance for member 12345.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_14",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "Extract the verified current savings balance from the member details page.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_15",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "Extract the visible savings balance for member 12345.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_16",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "Extract the verified current savings balance for member 12345.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_17",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "Extract the visible savings balance for member 12345.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_18",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "The member details are visible and the savings balance shown on the page should be extracted now.",
+      "output": "savings_balance"
+    },
+    {
+      "id": "step_19",
+      "action": "extract",
+      "target": {
+        "type": "text",
+        "role": "",
+        "name": "",
+        "value": "Savings Balance"
+      },
+      "description": "The member details are visible and the savings balance shown on the page can be extracted now.",
+      "output": "savings_balance"
+    }
+  ],
+  "outputs": {
+    "member_name": {
+      "type": "string"
+    },
+    "savings_balance": {
+      "type": "string"
+    }
+  },
+  "success_condition": {
+    "type": "all",
+    "conditions": [
+      "Member Details is visible",
+      "Member identity is verified",
+      "Savings balance is present"
+    ]
+  },
+  "discovery": {
+    "model": "gpt-5.4-mini",
+    "target_url": "http://127.0.0.1:8000",
+    "final_url": "http://127.0.0.1:8000/",
+    "safety_policy": {
+      "version": "1.0",
+      "allowed_origin": "http://127.0.0.1:8000",
+      "allowed_actions": [
+        "click",
+        "extract",
+        "fill",
+        "finish",
+        "verify"
+      ],
+      "allowed_click_buttons": [
+        "Member Search",
+        "Search Member"
+      ],
+      "allowed_fill_labels": [
+        "Member ID"
+      ],
+      "risky_actions": [
+        "delete",
+        "download",
+        "login",
+        "logout",
+        "navigate",
+        "purchase",
+        "send",
+        "submit",
+        "transfer",
+        "upload"
+      ]
+    }
+  }
+}
